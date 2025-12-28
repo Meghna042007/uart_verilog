@@ -62,7 +62,6 @@ else
              bit_count<=bit_count;
              if(baud_en)
                 begin
-                //$display("baud_count = %d",baud_count);
                 baud_count<=baud_count+16'd1;
                 if(baud_count== CPB-1)
                    begin
@@ -77,7 +76,6 @@ else
                    else
                       begin
                       bit_count<=bit_count+3'b1;
-                      //$display("bit_count = %d",bit_count);
                       state<=DATA;
                       end
                    end
