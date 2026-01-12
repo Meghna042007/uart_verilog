@@ -1,4 +1,4 @@
-`timescale 1ns / 1ps
+`timescale 1ns / 1ps 
 module tb_uart_rx;
   reg clk;
   reg rst;
@@ -12,7 +12,7 @@ module tb_uart_rx;
     .rx_done(rx_done)
   );
 
-  always #10 clk = ~clk; 
+  always #0.1 clk = ~clk; 
   task send_uart_byte(input [7:0] data);
     integer i;
     begin
@@ -38,12 +38,13 @@ $monitor($time," rst=%b , rx=%b , rx_data=%d , rx_done=%b",rst,rx,rx_data,rx_don
     rst = 0;
 
     repeat (10) @(posedge clk);
-    send_uart_byte(8'h55);
+    send_uart_byte(8'h5E);
 
     wait (rx_done);
 
-    repeat (100) @(posedge clk);
+    repeat (2000) @(posedge clk);
     $finish;
   end
 
 endmodule
+
