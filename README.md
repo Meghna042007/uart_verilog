@@ -74,7 +74,7 @@ Demonstrates full TX → RX data flow
 
 A loopback testbench is used to verify functionality
 
-TX output is connected directly to RX input
+TX output is connected  to RX input through a wire uart_line
 
 Testbench validates:
 
@@ -84,7 +84,7 @@ Baud-rate timing
 
 Correct data reception
 
-##Tools Used
+## Tools Used
 
 Verilog HDL
 
