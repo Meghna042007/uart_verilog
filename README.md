@@ -40,7 +40,8 @@ Timing is derived from the system clock and baud rate
 Data is transmitted and received LSB first
 
 ## Design Description
-UART Transmitter (TX)
+
+## UART Transmitter (TX)
 
 Generates start, data, and stop bits sequentially
 
@@ -50,7 +51,7 @@ Transmits one bit per baud interval
 
 Indicates transmission status using a busy flag
 
-UART Receiver (RX)
+## UART Receiver (RX)
 
 Detects falling edge of the start bit
 
@@ -62,7 +63,7 @@ Reconstructs the received byte using a shift register
 
 Asserts a completion flag after a valid frame is received
 
-Top-Level Integration
+## Top-Level Integration
 
 Connects TX output directly to RX input (loopback)
 
