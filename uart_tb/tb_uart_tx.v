@@ -18,7 +18,6 @@ tx_data=8'h5E;
 tx_start=1'b1;
 @(posedge clk);
 tx_start=1'b0;
-//repeat(10000)
 #500;
 $finish;
 end
